@@ -10,7 +10,7 @@ router.get('/getAllPolicies', (req, res) => {
         }
         else {
             console.log('Error in retrieving policy list :' + err);
-            res.status(404).send(err);
+            res.status(400).send(err);
         }
     });
 
@@ -23,7 +23,7 @@ router.get('/getPoliciesByCategory/:category', (req, res) => {
         }
         else {
             console.log('Error in retrieving policy list :' + err);
-            res.status(404).send(err);
+            res.status(400).send(err);
         }
     });
 
@@ -39,7 +39,7 @@ router.post('/addPolicy', (req, res) => {
             res.send(doc);
         else {
                 console.log('Error during record insertion : ' + err);
-                res.status(404).send(err);
+                res.status(400).send(err);
         }
     }); 
 });
@@ -49,7 +49,7 @@ router.put('/updatePolicy', (req, res) => {
         if (!err) { res.send(doc); }
         else {
                 console.log('Error during record update : ' + err);
-                res.status(404).send(err);
+                res.status(400).send(err);
         }
     });
 });
@@ -60,7 +60,7 @@ router.delete('/deletePolicy/:id', (req, res) => {
             res.send('Deleted successfully');
         else
             console.log('Error in employee delete :' + err);
-            res.status(404).send(err);
+            res.status(400).send(err);
     });
 });
 

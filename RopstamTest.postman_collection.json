@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "3dbe7099-ea9d-4fe0-8da6-0e2f62cc0adc",
+		"name": "RopstamTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5051138"
+	},
+	"item": [
+		{
+			"name": "Policies",
+			"item": [
+				{
+					"name": "GetAllPolicies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/policy/getAllPolicies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"policy",
+								"getAllPolicies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPoliciesByCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/policy/getPoliciesByCategory/:category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"policy",
+								"getPoliciesByCategory",
+								":category"
+							],
+							"variable": [
+								{
+									"key": "category",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addPolicy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "category",
+									"value": "6287f0de4910f3218cda7d1c",
+									"type": "text"
+								},
+								{
+									"key": "policyNumber",
+									"value": "high",
+									"type": "text"
+								},
+								{
+									"key": "policyDescription",
+									"value": "highest policy options 100$",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/policy/addPolicy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"policy",
+								"addPolicy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "GetAllCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/category/getAllCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"getAllCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "category",
+									"value": "Cat1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/createCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"createCategory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "faizan",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "faizanshah1496@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "123132131",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "islamabad",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/employee/createEmployee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employee",
+								"createEmployee"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

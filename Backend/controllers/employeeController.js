@@ -32,7 +32,7 @@ router.post('/createEmployee', (req, res) => {//actual login functionality is no
 
         }
         else {
-            res.send(err);
+            res.status(400).send(err);
                 console.log('Error during record insertion : ' + err);
         }
     });
