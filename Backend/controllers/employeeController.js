@@ -2,7 +2,7 @@ const express = require('express');
 var router = express.Router();
 const mongoose = require('mongoose');
 const Employee = mongoose.model('Employee');
-const apiKey='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'
+const apiKey=process.env.SENDGRID_API_KEY;// to be moved to .env file 
 const sendgridMail = require('@sendgrid/mail');
 sendgridMail.setApiKey(apiKey);
 

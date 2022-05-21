@@ -4,7 +4,7 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const bodyparser = require('body-parser');
-
+require('dotenv').config()
 const employeeController = require('./controllers/employeeController');
 const policyController = require('./controllers/policyController');
 const categoryController = require('./controllers/categoryController');
